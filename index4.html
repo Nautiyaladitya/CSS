@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">     <!--CSS DISPLAY PROP.-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS DISPLAY PROPERTY</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .box {
+            border: 4px solid violet;
+            line-height: 33px;
+            text-align: center;
+            /*   display: inline;      */
+            display: inline-block;
+            /*  display:block; */
+
+            /* padding top will not consider 
+                                 as upper we make it inline*/
+            padding: 50px;
+            margin: 20px;
+            /* same goes with margin top se nhi lagega inline hai*/
+            /*to make this correct we have to make these "display :inline-block;" */
+
+            /*   display: none;  */
+            /*   visibility: hidden; */
+
+            /*     display: flex;
+         justify-content: center;  */
+            /* flex and grid further */
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        I am a box <!-- div is a block level element-->
+    </div> <!-- to make this inline we use display inline prop. in css-->
+    <div class="box"> also a nice box</div>
+
+    <span>I am a good</span> <!--span is a inline element-->
+    <span>boy</span>
+</body>
+
+</html>

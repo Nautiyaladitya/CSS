@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS GRID </title>
+
+    <style>
+        .container {
+            border: 2px solid red;
+            display: grid;
+            grid-template-areas: "nav nav nav"
+                "side article article"
+                "footer footer footer ";
+
+        }
+
+        .items {
+            border: 2px solid green;
+            height: 70px;
+
+
+
+        }
+
+
+        .items-1 {
+            grid-area: nav;
+            background-color: aqua;
+
+        }
+
+        .items-2 {
+            grid-area: side;
+            background-color: blue;
+
+        }
+
+        .items-3 {
+            grid-area: article;
+            background-color: blueviolet;
+
+        }
+
+        .items-4 {
+            grid-area: footer;
+            background-color: chartreuse;
+
+        }
+
+        .items-5 {
+            grid-area: footer;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>CSS GRID-GAP PROPERTY</h1>
+    <div class="container">
+
+        <div class="items items-1">1</div>
+        <div class="items items-2">2</div>
+        <div class="items items-3">3</div>
+        <div class="items items-4">4</div>
+        <div class="items items-5">5</div>
+
+
+    </div>
+</body>
+
+</html>

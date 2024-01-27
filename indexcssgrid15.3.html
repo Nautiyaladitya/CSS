@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS GRID </title>
+
+    <style>
+        .container {
+            width: 80vw;
+            height: 90vh;  grid-temp  grid-template-columns: 1fr 2fr 1fr;late-columns: 1fr 2fr 1fr;
+            border: 3px solid red;
+            display: grid;
+            /*   grid-template-columns: 120px 100px;
+            grid-template-rows: 100px 100px 100px;  */
+
+            grid-template-columns: 1fr 2fr 1fr;
+            /*    grid-template-columns: repeat(4 , 1fr); */
+            /* above used when wanted same prop in 4 items , wanna make many columns !!*/
+
+        grid-template-columns: repeat(4, minmax(100pxm 1fr));
+        /* min. width and max-width property of a cell  */   
+        /*  gap: 34px;  */
+            /* grid gap , shorthand!! */
+            row-gap: 10px;
+            column-gap: 44px;
+
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .items {
+            border: 2px solid green;
+            height: 30px;
+            width: 39px;
+
+
+        }
+
+        .items-4 {
+            /*      grid-row: 1/2; /* overlapping to 1 !!*/
+            */
+            /* grid row start and end , shorthand !!*/
+            grid-column: 1/2;
+
+        }
+
+        .items-1 {
+            align-self: start;
+
+            /* here 1 and 4 will overlap !!*/
+            grid-row: 1/2;
+            grid-column: 1/2;
+            /*   grid column start and end , shorthand !!*/
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="items items-1">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items items-4">4</div>
+        <div class="items">5</div>
+
+
+    </div>
+</body>
+
+</html>
